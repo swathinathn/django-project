@@ -13,15 +13,14 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os
 
-import os
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+# if RENDER_EXTERNAL_HOSTNAME:
+#     ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME]
+# else:
+#     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS = [RENDER_EXTERNAL_HOSTNAME]
-else:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['*']
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +36,6 @@ SECRET_KEY = 'django-insecure-ubm-$+rwum31=v0+-%m&hr6gss+$t_sev%_4bd&bzzxr@jfw-t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
